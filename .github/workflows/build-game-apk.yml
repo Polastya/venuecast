@@ -1,0 +1,39 @@
+name: Build 500 Bachao APK
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  build-game:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: game
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: "12266719"
+          accept-android-sdk-licenses: true
+      - name: Prepare SDK
+        shell: bash
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+      - name: Build APK
+        run: gradle --no-daemon :app:assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 500-Bachao-debug-apk
+          path: game/app/build/outputs/apk/debug/app-debug.apk
