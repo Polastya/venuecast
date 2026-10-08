@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VenueCast</string>
+    <string name="app_version">VenueCast V4 • Wired Android Auto</string>
+    <string name="start_mirror">START MIRROR</string>
+    <string name="stop_mirror">STOP MIRROR</string>
+    <string name="status_ready">Ready — connect Venue by USB</string>
+    <string name="status_permission">Screen capture permission is required</string>
+    <string name="status_waiting_car">Waiting for Venue / Android Auto surface…</string>
+    <string name="status_active">Mirroring active</string>
+    <string name="status_error">Mirror error — reconnect USB</string>
+    <string name="quality_title">Quality</string>
+    <string name="quality_720">720p / 30 FPS</string>
+    <string name="quality_1080">1080p / 30 FPS</string>
+    <string name="accessibility_title">Optional touch service</string>
+    <string name="accessibility_description">Optional phone-side gesture bridge. Enable VenueCast in Android Accessibility settings when needed.</string>
+    <string name="accessibility_service_description">Optional VenueCast gesture bridge for phone-side testing.</string>
+    <string name="notification_channel">VenueCast</string>
+    <string name="notification_mirroring">VenueCast is mirroring your screen.</string>
+    <string name="notification_stop">Stop</string>
+    <string name="car_ready">VenueCast ready. Start mirroring from your phone.</string>
+    <string name="car_active">VenueCast is mirroring the phone display.</string>
+    <string name="car_stop">STOP MIRROR</string>
+    <string name="enable_safety">ENABLE SAFETY</string>
+    <string name="car_moving">Vehicle moving — visual mirroring paused.</string>
+    <string name="car_ready_action">READY</string>
+    <string name="car_status">Phone screen output</string>
+</resources>
