@@ -1,0 +1,1 @@
+# VenueCast debug prototype: no custom ProGuard rules required.
